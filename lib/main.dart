@@ -49,20 +49,18 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Iniciar compras'),
             ),
-            children: Row [
-              ElevatedButton (
-                onPressed: () {
-                  print('Botão cliado')
-                }
-                child: const Text('botao 2')
-              )
-              ElevatedButton (
-                onPressed: () {
-                  print('Botão cliado')
-                }
-                child: const Text('botao 3'),
-              )
-            ]
+            ElevatedButton (
+              onPressed: () {
+                print('Botão cliado');
+              }
+              child: const Text('botao 2')
+            )
+            ElevatedButton (
+              onPressed: () {
+                print('Botão cliado');
+              }
+              child: const Text('botao 3'),
+            )
           ]
         )
       )
