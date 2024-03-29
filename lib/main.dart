@@ -31,60 +31,87 @@ class HomePage extends StatelessWidget {
         title: const Text("HomePage", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 40)),
         backgroundColor : corRoxo,
       ),
-      body: Center(
-        
-        child: Column (
-          children: [
-            const Text(
-              'Every Purchase Will be Made With Pleasure',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
-              textAlign: TextAlign.center,
-            ),
-            
-            const Text(
-              'Buy and enjoy'
-            ),
-            
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: corRoxo,
-                minimumSize: const Size(250,50)
-              ),
-              child: const Text(
-                'Iniciar compras',  
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
-              )
-            ),
 
-            const SizedBox(height: 24),
-
-            Row (
-              mainAxisAlignment: MainAxisAlignment.center,
+      body: Stack(
+        children: [
+          Center(
+            child: Column(
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    side: const BorderSide(color: corRoxo),
-                    minimumSize: const Size(125,50)
-                  ),
-                  child: const Text('Learn more'),
+                const SizedBox(height: 170),
+
+                const Text(
+                  'Every Purchase Will be Made With Pleasure',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                  textAlign: TextAlign.center,
                 ),
 
-                const SizedBox(width: 10),
+                const SizedBox(height: 15),
+
+                const Text('Buy and enjoy'),
+
+                const SizedBox(height: 15),
 
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    side: const BorderSide(color: corRoxo),
-                    minimumSize: const Size(125,50)
+                    backgroundColor: corRoxo,
+                    minimumSize: const Size(250, 50),
                   ),
-                  child: const Text('Login'),
+                  child: const Text(
+                    'Iniciar compras',
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                ),
+
+                const SizedBox(height: 15),
+                
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        side: const BorderSide(color: corRoxo),
+                        minimumSize: const Size(120, 50),
+                      ),
+                      child: const Text(
+                        'Learn more',
+                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)
+                      ),
+                    ),
+
+                    const SizedBox(width: 10),
+
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        side: const BorderSide(color: corRoxo),
+                        minimumSize: const Size(120, 50),
+                      ),
+                      child: const Text(
+                        'Login', 
+                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ]
-        ),
+          ),
+          Positioned(
+            bottom: 16.0,
+            right: 16.0,
+            child: FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: corRoxo,
+              shape: const CircleBorder(),
+              child: const Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       )
     );
   }
