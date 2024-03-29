@@ -32,37 +32,59 @@ class HomePage extends StatelessWidget {
         backgroundColor : corRoxo,
       ),
       body: Center(
+        
         child: Column (
           children: [
             const Text(
               'Every Purchase Will be Made With Pleasure',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35, )
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+              textAlign: TextAlign.center,
             ),
+            
             const Text(
               'Buy and enjoy'
             ),
+            
             ElevatedButton(
-              onPressed: () {
-                print(
-                  'Start shopping'
-                );
-              },
-              child: const Text('Iniciar compras'),
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: corRoxo,
+                minimumSize: const Size(250,50)
+              ),
+              child: const Text(
+                'Iniciar compras',  
+                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
+              )
             ),
-            ElevatedButton (
-              onPressed: () {
-                print('Botão cliado');
-              }
-              child: const Text('botao 2')
-            )
-            ElevatedButton (
-              onPressed: () {
-                print('Botão cliado');
-              }
-              child: const Text('botao 3'),
-            )
+
+            const SizedBox(height: 24),
+
+            Row (
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    side: const BorderSide(color: corRoxo),
+                    minimumSize: const Size(125,50)
+                  ),
+                  child: const Text('Learn more'),
+                ),
+
+                const SizedBox(width: 10),
+
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    side: const BorderSide(color: corRoxo),
+                    minimumSize: const Size(125,50)
+                  ),
+                  child: const Text('Login'),
+                ),
+              ],
+            ),
           ]
-        )
+        ),
       )
     );
   }
