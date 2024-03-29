@@ -31,7 +31,6 @@ class HomePage extends StatelessWidget {
         title: const Text("HomePage", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 40)),
         backgroundColor : corRoxo,
       ),
-
       body: Stack(
         children: [
           Center(
@@ -93,14 +92,14 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)
                       ),
                     ),
-                  ],
+                  ], //Children
                 ),
-              ],
+              ], //Children
             ),
           ),
           Positioned(
-            bottom: 16.0,
-            right: 16.0,
+            bottom: 16,
+            right: 16,
             child: FloatingActionButton(
               onPressed: () {},
               backgroundColor: corRoxo,
@@ -111,8 +110,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-        ],
+        ], //Children
       )
     );
-  }
-}
+  } //Widget Build
+} //Class
